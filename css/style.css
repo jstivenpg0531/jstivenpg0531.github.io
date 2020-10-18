@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*STYLE DEL CONTENIDO PARA EL SITIO WEB*/
+body{
+    background: #3a3d47;
+    font-family: Verdana;
+
+}
+
+/*STYLE PARA EL ENCABEZADO*/
+.Encabezado{
+
+    background: #209cee;
+    margin: auto;
+    width: 100%
+
+}
+
+.logo{
+    padding: 1px;
+    float: left;
+}
+
+.Container {
+    width: 1200px;
+    margin: 10px auto;
+    background: white;
+
+}
+
+.redes{
+    overflow: hidden;
+    padding: 3%;
+    margin-left: 70%;
+}
+
+.redes a{
+    float: left;
+    transition: all 0.2s ease;
+    color: white;
+    font-size: 30px;
+    width: 50px; 
+}
+
+@media (max-width: 555px ){ 
+    .redes{
+    width: 100%;
+    margin-left: 5%;
+    }
+}
+
+/*STYLE SLIDER*/
+
+.Slider{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0;
+}
+
+.Slider ul{
+    position: relative;
+    left: 0%;
+    margin: auto;
+    height: auto;
+    clear: both;
+    display: flex;
+    padding: 0;
+    width: 500%;
+    animation: transicion 20s infinite alternate;
+}
+
+.Slider ul li{
+    position: relative;
+    float: left;
+    width: 20%;
+    list-style: none;
+}
+
+.Slider ul li img{
+    width: 100%;
+}
+
+/* Animacion para el Slider con keyframe */
+
+@keyframes transicion{
+    0%{ margin-left: 0;}
+    20%{ margin-left: 0;}
+
+    30%{ margin-left: -100%;}
+    40%{ margin-left: -100%;}
+
+    50%{ margin-left: -200%;}
+    60%{ margin-left: -200%;}
+
+    70%{ margin-left: -300%;}
+    80%{ margin-left: -300%;}
+
+    90%{ margin-left: -400%;}
+    100%{ margin-left: -400%;}
+}
+
+.Slider #retroceder{
+    background: #666;
+    padding: 3% 1.5% 3% 1%;
+    top: 35%;
+    left: 0;
+    font-size: 20px;
+    opacity: 1;
+}
+
+.Slider #avanzar{
+    background: #666;
+    padding: 3% 1% 3% 1.5%;
+    top: 35%;
+    right: 0;
+    font-size: 20px;
+    opacity: 1;
+}
+
+.Slider #retroceder:hover, .Slider #avanzar:hover{
+    background: #777;
+}
+
+.Slider #retroceder:active, .Slider #avanzar:active{
+    background: #444;
+}
+
+@media (max-width: 500px){
+    .Slider #avanzar, .Slider #retroceder {
+        opacity: 0;
+    }
+
+    .Slider{
+        position: relative;
+    }
+}
+
+.paginacion{
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+    bottom: 0px;
+    left: 0;
+    z-index: 1;
+    background: rgba(233, 230, 230, 0.096);
+}
+
+.paginacion li{
+    display: inline-block;
+    margin: 0px, 5px;
+    cursor: pointer;
+    opacity: .5;
+    color: white;
+    text-shadow: 0px, 0px, 5px #333;
+}
+
+.paginacion li:first-child{
+    opacity: 1;
+}
+
+/*STYLE PARA EL MENU*/
+
+.navegador-menu{
+    width: 100%;
+    background: #209cee;
+    margin: auto;
+}
+
+/*.Menu{*/
+    /*width: 100%;*/
+    /*float: left;*/
+    /*padding: 50px;*/
+    /*font-size: 20px;*/
+    /*margin:auto;*/
+/*}*/
+
+.Menu ul{
+    margin:0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+
+}
+
+.Menu li {
+    /*float: left;*/
+    /*list-style: none;*/
+    flex-grow: 1;
+}
+
+.Menu li a{
+    display:block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.Menu li a:hover{
+    /*background: #0d356a ;*/
+    background: #207cee;
+    color: #242424;
+}
+
+#navegador{
+    display: none;
+}
+
+.navegador-menu label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+.navegador-menu label img{
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+.navegador-menu label:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+@media(max-width: 750px){
+    .navegador-menu label{
+        display: block;
+    }
+
+.Menu{
+        position: absolute;
+        background: #242424;
+        width: 50%;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+
+    .Menu ul{
+        flex-direction: column;
+    }
+
+    #navegador:checked ~ .Menu{
+        margin: 0;
+    }
+}
+/*STYLE PARA LOS PRODUCTOS O SERVICIOS*/
+
+.Cuerpo{
+    overflow: hidden;
+}
+
+.Titulo{
+    text-align: center;
+    padding: 20px 0 15px 0;
+    color: #000000;
+    font-size: 35px;
+}
+
+.Caja{
+    float: left;
+    width: 380px;
+    margin: 8px;
+    border: 1px solid;
+}
+
+.Subtitulo{
+    background: #209cee;
+
+}
+
+.Servicios{
+    text-align: center;
+    color: white;
+    padding: 15px 0;
+}
+
+.efecto:hover{
+    cursor: pointer;
+    opacity: 0.7;/*VALOR ES DE 0.0 A 1.0*/
+
+}
+
+.Contenido{
+    padding: 20px;
+    text-align: justify;
+}
+
+.Boton{
+    color: white;
+    background: #209cee;
+    cursor: pointer;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+
+.Boton:hover{
+    background: #201cee;
+}
+
+.Localizacion {
+    text-align: center;
+    padding: 20px 0 15px 0;
+    color: #000000;
+    font-size: 35px;
+}
+
+
+/*STYLE FOOTER*/
+.Footer{
+    background: #209cee;
+    margin: auto;
+}
+
+
+
+.Follow{
+    text-align: center;
+    color:white;
+    
+}
+.Follow a{
+    margin: 10px 20px;
+    
+}
+
+.Follow a img{
+    width: 40px;
+}
+
+.contactos-footer{
+    width: 100%;
+}
+
+.contactos-footer ul{
+    text-align: center;
+}
+.contactos-footer ul li{
+    display: inline-block;
+    padding: 40px;
+    color: white;
+    font-size: 15px;
+}
+
+.copyright{
+    font-size: 7px;
+    color: white;
+    text-align: center;
+    background: #207cee;
+    padding: 10px;
+}
+/**
+selectores elemetos
+selectors clase
+selectores globales
+RGB HEXADECIMAL
+***/
